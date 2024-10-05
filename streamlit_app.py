@@ -13,11 +13,11 @@ st.set_page_config(
 
 # App import
 import Welcome
-import Data_Preview
-import Data_Preparation
-import Smoothing_and_Filtering
-import Regression
-import Classification
+# import Data_Preview
+# import Data_Preparation
+# import Smoothing_and_Filtering
+# import Regression
+# import Classification
 
 # Data object class
 class DataObject():
