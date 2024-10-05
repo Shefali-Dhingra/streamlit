@@ -90,7 +90,7 @@ class Interface():
       
       # Initial welcome page when there is no file selected
       else:
-        Welcome_Page.welcome()
+        Welcome.welcome()
 
 def main():
   """
