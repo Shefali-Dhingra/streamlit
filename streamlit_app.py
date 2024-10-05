@@ -14,10 +14,7 @@ st.set_page_config(
 # App import
 import Welcome
 import Data_Preview
-# import Data_Preparation
-# import Smoothing_and_Filtering
-# import Regression
-# import Classification
+
 
 df = pd.read_csv('data/Imports_Exports_Dataset.csv')
 filesize = df.size
@@ -31,11 +28,6 @@ with st.sidebar:
 if navigation == 'Data_Preview':
   with st.container():
     Data_Preview.data_preview(df)
-
-        # Runs 'Data Preparation' app
-if navigation == 'Data Preparation':
-  with st.container():
-    Data_Preparation.data_prep(df)
       
       # Initial welcome page when there is no file selected
 else:
