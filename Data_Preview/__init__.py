@@ -1,1 +1,1 @@
-from .data_preview import main as Data_Preview
+from .data_preview import main as data_preview
