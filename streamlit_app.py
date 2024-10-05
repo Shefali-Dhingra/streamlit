@@ -68,15 +68,12 @@ class Interface():
             dt_obj.filesize = dt_obj.df.size
       
         # Side bar navigation menu with a select box
-        menu = ['Welcome Page','Data Preview', 'Data Preparation']
+        menu = ['Data Preview', 'Data Preparation']
         navigation = st.sidebar.selectbox(label="Select menu", options=menu)
 
         # Apps
 
         # Landing page
-        if navigation == 'Welcome':
-          with st.container():
-           Welcome.welcome()
 
         # Runs 'Data Preview' app
         if navigation == 'Data Preview':
