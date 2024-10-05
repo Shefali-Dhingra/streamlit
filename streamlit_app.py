@@ -21,10 +21,15 @@ filesize = df.size
 
 with st.sidebar:
   st.title('💻Dashboard💻') 
-  menu = ['Data Preview', 'Data Preparation']
+  menu = ['HomePage','Data Preview']
   navigation = st.sidebar.selectbox(label="Select menu", options=menu)
 
         # Runs 'Data Preview' app
+if navigation == 'Welcome Page':
+  with st.container():
+    Welcome_Page.welcome()
+
+
 if navigation == 'Data_Preview':
   with st.container():
     Data_Preview.data_preview(df)
