@@ -29,31 +29,15 @@ with st.sidebar:
   navigation = st.sidebar.selectbox(label="Select menu", options=menu)
 
         # Runs 'Data Preview' app
-        if navigation == 'Data_Preview':
-          with st.container():
-           Data_Preview.data_preview(dt_obj)
+if navigation == 'Data_Preview':
+  with st.container():
+    Data_Preview.data_preview(dt_obj)
 
         # Runs 'Data Preparation' app
-        if navigation == 'Data Preparation':
-          with st.container():
-           Data_Preparation.data_prep(dt_obj)
+if navigation == 'Data Preparation':
+  with st.container():
+    Data_Preparation.data_prep(dt_obj)
       
       # Initial welcome page when there is no file selected
-      else:
-        Welcome.welcome()
-
-def main():
-  """
-  Main and its Streamlit configuration
-  """
-
-  # Creating an instance of the original dataframe data object                   
-  data_main = DataObject()
-  # Creating an instance of the main interface
-  interface = Interface()
-  interface.side_bar(data_main)
-
-
-# Run Main
-if __name__ == '__main__':
-  main()
+else:
+  Welcome.welcome()
