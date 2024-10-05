@@ -2,11 +2,7 @@
 import streamlit as st #streamlit backend
 
 def main(df):
-    """Data Preview main
 
-    :param data_obj: DataObject instance
-    :type data_obj: __main__.DataObject
-    """
     st.header("DATA PREVIEW")
     col1, col2 = st.columns(2)
     col3 = st.columns(1)
@@ -26,4 +22,4 @@ def main(df):
 
 # Main
 if __name__ == "__main__":
-   main()
+   main(df)
