@@ -1,9 +1,6 @@
 # General import section
 import streamlit as st #streamlit backend
 
-# Importing specific plots
-from Visualization.visualization import Heatmap
-
 def main(data_obj):
     """Data Preview main
 
@@ -12,7 +9,7 @@ def main(data_obj):
     """
     st.header("DATA PREVIEW")
     col1, col2 = st.columns(2)
-    col3, col4 = st.columns(2)
+    col3 = st.columns(2)
     
     with col1:
         st.subheader("Original dataframe")
@@ -27,13 +24,6 @@ def main(data_obj):
         st.subheader("Data types")
         st.dataframe(data_obj.df.dtypes.astype(str))
         
-    with col4:
-        st.subheader("Correlation")
-        st.dataframe(data_obj.df.corr())
-
-    # Correlation matrix
-    st.subheader("Correlation heatmap")
-    Heatmap(data_obj)
 
 # Main
 if __name__ == "__main__":
