@@ -10,7 +10,7 @@ st.set_page_config(
                     layout="wide",
                     initial_sidebar_state="expanded",
                     menu_items=None)
-
+alt.themes.enable("dark")
 # App import
 import Welcome
 import Data_Preview
@@ -65,6 +65,7 @@ class Interface():
             filename = StringIO(filename)
             #now the standard 'read_csv' should work
             dt_obj.df = pd.read_csv(filename, sep=';', decimal=',', index_col = False)
+            ## Add 3001 sample
             dt_obj.filesize = dt_obj.df.size
       
         # Side bar navigation menu with a select box
@@ -72,7 +73,7 @@ class Interface():
         navigation = st.sidebar.selectbox(label="Select menu", options=menu)
 
         # Runs 'Data Preview' app
-        if navigation == 'Data Preview':
+        if navigation == 'Data_Preview':
           with st.container():
            Data_Preview.data_preview(dt_obj)
 
