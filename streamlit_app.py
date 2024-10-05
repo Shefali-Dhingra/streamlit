@@ -19,7 +19,7 @@ import Data_Preview
 # import Regression
 # import Classification
 
-dt_obj.df = pd.read_csv('data/us-population-2010-2019-reshaped.csv')
+dt_obj.df = pd.read_csv('data/Imports_Exports_Dataset.csv')
             ## Add 3001 sample
 dt_obj.filesize = dt_obj.df.size
 
