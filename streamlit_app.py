@@ -19,9 +19,8 @@ import Welcome
 # import Regression
 # import Classification
 
-dt_obj.df = pd.read_csv('data/Imports_Exports_Dataset.csv')
-            ## Add 3001 sample
-dt_obj.filesize = dt_obj.df.size
+df = pd.read_csv('data/Imports_Exports_Dataset.csv')
+filesize = df.size
 
 with st.sidebar:
   st.title('💻Dashboard💻') 
@@ -31,12 +30,12 @@ with st.sidebar:
         # Runs 'Data Preview' app
 if navigation == 'Data_Preview':
   with st.container():
-    Data_Preview.data_preview(dt_obj)
+    Data_Preview.data_preview(df)
 
         # Runs 'Data Preparation' app
 if navigation == 'Data Preparation':
   with st.container():
-    Data_Preparation.data_prep(dt_obj)
+    Data_Preparation.data_prep(df)
       
       # Initial welcome page when there is no file selected
 else:
