@@ -10,7 +10,7 @@ st.set_page_config(
                     layout="wide",
                     initial_sidebar_state="expanded",
                     menu_items=None)
-alt.themes.enable("dark")
+
 # App import
 import Welcome
 import Data_Preview
