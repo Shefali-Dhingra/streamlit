@@ -71,10 +71,6 @@ class Interface():
         menu = ['Data Preview', 'Data Preparation']
         navigation = st.sidebar.selectbox(label="Select menu", options=menu)
 
-        # Apps
-
-        # Landing page
-
         # Runs 'Data Preview' app
         if navigation == 'Data Preview':
           with st.container():
