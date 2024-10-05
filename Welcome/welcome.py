@@ -15,4 +15,4 @@ def main():
                 3. **Data Preparation:** Drop and/or rename single/multiple columns, don't forget to submit changes
                 """)  
     st.info("The experience from the workflow is the best when all the pages are navigated in sequence!")
-    st.info("This Project is made by Shefali Dhingra (055043) for The Data Visualisation Dashboard Project, under the Subject Data Exploration and Visualisation using Python (DEVP")
+    st.info("This Project is made by Shefali Dhingra (055043) for The Data Visualisation Dashboard Project, under the Subject Data Exploration and Visualisation using Python (DEVP)")
