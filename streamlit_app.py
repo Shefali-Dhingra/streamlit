@@ -71,3 +71,19 @@ class Interface():
       
       else:
         Welcome.welcome()
+
+def main():
+  """
+  Main and its Streamlit configuration
+  """
+
+  # Creating an instance of the original dataframe data object                   
+  data_main = DataObject()
+  # Creating an instance of the main interface
+  interface = Interface()
+  interface.side_bar(data_main)
+
+
+# Run Main
+if __name__ == '__main__':
+  main()
