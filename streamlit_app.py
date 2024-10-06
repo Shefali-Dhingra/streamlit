@@ -61,7 +61,7 @@ class Interface():
       menu = ['Home Page','Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
       navigation = st.sidebar.selectbox(label="Select menu", options=menu)
             
-      if navigation == 'Data_Preview':
+      if navigation == 'Data Preview':
         with st.container():
           Data_Preview.data_preview(df)
       
