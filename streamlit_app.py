@@ -58,12 +58,8 @@ class Interface():
       
         # Side bar navigation menu with a select box
       st.title('💻Dashboard💻') 
-      menu = ['Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
+      menu = ['Home Page','Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
       navigation = st.sidebar.selectbox(label="Select menu", options=menu)
-      
-      if navigation == 'Welcome Page':
-        with st.container():
-          Welcome_Page.welcome()
             
       if navigation == 'Data_Preview':
         with st.container():
