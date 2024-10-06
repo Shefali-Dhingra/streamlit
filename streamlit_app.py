@@ -19,20 +19,55 @@ import Data_Preview
 df = pd.read_csv('data/Imports_Exports_Dataset.csv')
 filesize = df.size
 
-with st.sidebar:
-  st.title('💻Dashboard💻') 
-  menu = ['HomePage','Data Preview']
-  navigation = st.sidebar.selectbox(label="Select menu", options=menu)
+# Data object class
+class DataObject():
+    """
+    Data object class holds a dataframe and its byte size.
+    """
+    def __init__(self, df=df, filesize=filesize):
+      """The constructor for DataObject class
 
-        # Runs 'Data Preview' app
-if navigation == 'Welcome Page':
-  with st.container():
-    Welcome_Page.welcome()
+      :param df: pandas dataframe object, defaults to None
+      :type df: pandas.core.frame.DataFrame, optional
+      :param filesize: byte size of pandas dataframe, defaults to None
+      :type filesize: numpy.int32, optional
+      """
+      self.df = df
+      self.filesize = filesize
 
 
-if navigation == 'Data_Preview':
-  with st.container():
-    Data_Preview.data_preview(df)
+# Interface class        
+class Interface():
+    """
+    Interface class contains a file picker and a side bar. It also handles the import of a data object.
+    """
+    def __init__(self):
+      """The constructor for Interface class.
+      """
+      pass
+    
+    def side_bar(cls, dt_obj):
+      """Sidebar configuration and file picker
+
+      :param dt_obj: pandas dataframe object
+      :type dt_obj: pandas.core.frame.DataFrame
+      """
+      # Accepts .csv and .data
+        dt_obj.df = pd.read_csv('data/Imports_Exports_Dataset.csv', index_col = False)
+        dt_obj.filesize = dt_obj.df.size
+      
+        # Side bar navigation menu with a select box
+        st.title('💻Dashboard💻') 
+        menu = ['Welcome Page','Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
+        navigation = st.sidebar.selectbox(label="Select menu", options=menu)
+      
+        if navigation == 'Welcome Page':
+          with st.container():
+            Welcome_Page.welcome()
+            
+        if navigation == 'Data_Preview':
+          with st.container():
+            Data_Preview.data_preview(df)
       
       # Initial welcome page when there is no file selected
 else:
