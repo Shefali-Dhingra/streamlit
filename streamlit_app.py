@@ -53,22 +53,21 @@ class Interface():
       :type dt_obj: pandas.core.frame.DataFrame
       """
       # Accepts .csv and .data
-        dt_obj.df = pd.read_csv('data/Imports_Exports_Dataset.csv', index_col = False)
-        dt_obj.filesize = dt_obj.df.size
+      dt_obj.df = pd.read_csv('data/Imports_Exports_Dataset.csv', index_col = False)
+      dt_obj.filesize = dt_obj.df.size
       
         # Side bar navigation menu with a select box
-        st.title('💻Dashboard💻') 
-        menu = ['Welcome Page','Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
-        navigation = st.sidebar.selectbox(label="Select menu", options=menu)
+      st.title('💻Dashboard💻') 
+      menu = ['Welcome Page','Data Preview', 'Data Visualisation','Data Observation','Managerial Insights']
+      navigation = st.sidebar.selectbox(label="Select menu", options=menu)
       
-        if navigation == 'Welcome Page':
-          with st.container():
-            Welcome_Page.welcome()
+      if navigation == 'Welcome Page':
+        with st.container():
+          Welcome_Page.welcome()
             
-        if navigation == 'Data_Preview':
-          with st.container():
-            Data_Preview.data_preview(df)
+      if navigation == 'Data_Preview':
+        with st.container():
+          Data_Preview.data_preview(df)
       
-      # Initial welcome page when there is no file selected
-else:
-  Welcome.welcome()
+      else:
+        Welcome.welcome()
